@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 280px;
+      min-height: 240px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      padding: 24px 20px 20px 20px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      color: #1a1a1a;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .action-btn {
+      width: 100%;
+      padding: 12px;
+      background: #7bc96a;
+      border: none;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .action-btn:hover {
+      background: #6ab859;
+    }
+
+    .action-btn:active {
+      transform: scale(0.98);
+    }
+
+    .action-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: #ffffff;
+    }
+
+    .action-btn:disabled {
+      background: #d0d0d0;
+      cursor: not-allowed;
+    }
+
+    .status {
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #1a1a1a;
+      background: #f5f5f5;
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      flex-shrink: 0;
+    }
+
+    .status.success {
+      background: #f0f9ed;
+      color: #4a9e3a;
+    }
+
+    .status.error {
+      background: #fef2f2;
+      color: #dc2626;
+    }
+
+    .status.info {
+      background: #eff6ff;
+      color: #2563eb;
+    }
+
+    .footer {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 16px;
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .github-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #666;
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+
+    .github-link:hover {
+      color: #1a1a1a;
+    }
+
+    .github-link svg {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 48 48" fill="none">
+        <path d="M0 0 C15.84 0 31.68 0 48 0 C48 15.84 48 31.68 48 48 C32.16 48 16.32 48 0 48 C0 32.16 0 16.32 0 0 Z " fill="#1E1D1D"/>
+        <path d="M0 0 C8.25 0 16.5 0 25 0 C25 1.98 25 3.96 25 6 C24.63261719 5.51917969 24.26523437 5.03835937 23.88671875 4.54296875 C21.25159557 2.38795083 19.17494364 2.49327654 15.8125 2.3125 C13.894375 2.209375 11.97625 2.10625 10 2 C10 6.29 10 10.58 10 15 C11.258125 14.896875 12.51625 14.79375 13.8125 14.6875 C14.52019531 14.62949219 15.22789063 14.57148438 15.95703125 14.51171875 C18.43771309 14.07639687 18.43771309 14.07639687 21 11 C21 14.3 21 17.6 21 21 C20.34 20.01 19.68 19.02 19 18 C16.80545319 17.42006301 16.80545319 17.42006301 14.375 17.3125 C13.55773437 17.24675781 12.74046875 17.18101563 11.8984375 17.11328125 C11.27195312 17.07589844 10.64546875 17.03851562 10 17 C11.1994317 23.8922568 14.61262338 27.19554876 19.625 31.875 C21.01476907 33.20390327 22.40288896 34.53453418 23.7890625 35.8671875 C24.40475098 36.44581543 25.02043945 37.02444336 25.65478516 37.62060547 C27 39 27 39 27 40 C14.46 40 1.92 40 -11 40 C-11 27.46 -11 14.92 -11 2 C-5.68891686 6.55235698 -0.87520797 11.03926207 4 16 C4 11.38 4 6.76 4 2 C2.68 1.34 1.36 0.68 0 0 Z " fill="#B9F3A9" transform="translate(11,8)"/>
+        <path d="M0 0 C8.25 0 16.5 0 25 0 C25 1.98 25 3.96 25 6 C24.63261719 5.51917969 24.26523437 5.03835937 23.88671875 4.54296875 C21.25159557 2.38795083 19.17494364 2.49327654 15.8125 2.3125 C13.894375 2.209375 11.97625 2.10625 10 2 C10 6.29 10 10.58 10 15 C11.258125 14.896875 12.51625 14.79375 13.8125 14.6875 C14.52019531 14.62949219 15.22789063 14.57148438 15.95703125 14.51171875 C18.43771309 14.07639687 18.43771309 14.07639687 21 11 C21 14.3 21 17.6 21 21 C20.34 20.01 19.68 19.02 19 18 C16.80545319 17.42006301 16.80545319 17.42006301 14.375 17.3125 C13.55773438 17.24675781 12.74046875 17.18101563 11.8984375 17.11328125 C11.27195312 17.07589844 10.64546875 17.03851562 10 17 C10.05985379 19.29240007 10.14859027 21.58406206 10.25 23.875 C10.29640625 25.15117188 10.3428125 26.42734375 10.390625 27.7421875 C10.59171875 28.81726563 10.7928125 29.89234375 11 31 C12.32 31.66 13.64 32.32 15 33 C10.38 33 5.76 33 1 33 C1.99 32.34 2.98 31.68 4 31 C5.5300634 23.38472264 7.51570839 9.03141678 4 2 C2.68 1.34 1.36 0.68 0 0 Z " fill="#FBFBFA" transform="translate(11,8)"/>
+      </svg>
+      <span class="logo-text">Read Forbes</span>
+    </div>
+  </div>
+
+  <div class="subtitle">
+    Free access to Forbes articles
+  </div>
+
+  <button class="action-btn" id="readBtn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      <path d="M12 6 L12 12 L14 10 L16 12 L16 6"/>
+      <path d="M8 6 L8 10"/>
+    </svg>
+    Read Article
+  </button>
+
+  <div class="status" id="status">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="12" y1="8" x2="12" y2="12"/>
+      <line x1="12" y1="16" x2="12.01" y2="16"/>
+    </svg>
+    <span id="statusText">Ready to read Forbes articles</span>
+  </div>
+
+  <div class="footer">
+    <a class="github-link" href="https://github.com/mutaalDARK/read-Forbes" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+      </svg>
+      GitHub
+    </a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
