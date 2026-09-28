@@ -4,6 +4,8 @@
 
 A Chrome extension that cleans up Forbes limits on articles so you can read without ads and clutter. I made it to get hands-on experience with browser extensions, injecting scripts into web pages, and changing how content appears on a page.
 
+![Read-Forbes Preview](images/extension-preview.png)
+
 ## Installation
 ### From local files (for development / testing)
 
